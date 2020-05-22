@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:layout_marginBottom="@dimen/dp_2"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content"
+            android:weightSum="2">
+
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/imageViewRequest"
+                    android:layout_weight="0.5"
+                    android:layout_width="0dp"
+                    android:padding="@dimen/dp_10"
+                    android:layout_height="@dimen/dp_100"
+                    android:src="@drawable/person" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1.5"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="2.8"
+                    android:weightSum="1"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="@dimen/dp_0"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_weight="0.8">
+
+                        <TextView
+                            android:id="@+id/nameRequest"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="10dp"
+                            android:text="Aliza Smith"
+                            android:layout_marginRight="@dimen/dp_10"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/sp_16" />
+
+                        <View
+                            android:layout_width="0.1dp"
+                            android:layout_height="match_parent"
+                            android:background="@android:color/black"/>
+
+                        <TextView
+                            android:id="@+id/jobTypeRequest"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/sp_12"
+                            android:text="Plumber"
+                            android:layout_marginLeft="@dimen/dp_5"
+                            android:fontFamily="@font/lato_light"/>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/statusRequest"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="end"
+                        android:layout_weight="0.2"
+                        android:textSize="@dimen/sp_12"
+                        android:fontFamily="@font/lato_regular"
+                        android:text="Rejected"
+                        android:layout_gravity="end"
+                        android:layout_marginRight="@dimen/dp_10"
+                        android:textColor="@android:color/holo_red_dark" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:weightSum="2"
+
+                    >
+
+                    <TextView
+                        android:id="@+id/rateRequest"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:ellipsize="end"
+                        android:padding="@dimen/dp_5"
+                        android:textSize="@dimen/sp_12"
+                        android:fontFamily="@font/lato_light"
+                        android:maxLines="1"
+                        android:paddingLeft="10dp"
+                        android:singleLine="true"
+                        android:text="200/per hour" />
+
+                    <TextView
+                        android:id="@+id/timeRequest"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:paddingRight="@dimen/dp_10"
+                        android:textSize="@dimen/sp_12"
+                        android:fontFamily="@font/lato_light"
+                        android:text="21st jan,09:00-11:00"
+                        android:gravity="end" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </RelativeLayout>
+</layout>

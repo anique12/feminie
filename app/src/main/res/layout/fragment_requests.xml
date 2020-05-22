@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".fragments.Requests">
+
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:background="@color/colorPrimary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:weightSum="1">
+                <TextView
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="wrap_content"
+                    android:text="Requests"
+                    android:textSize="24sp"
+                    android:layout_weight="0.9"
+                    android:textColor="@android:color/white"
+                    android:fontFamily="@font/lato_bold"/>
+
+                <ImageView
+                    android:id="@+id/searchRequest"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/search"
+                    android:layout_marginLeft="@dimen/dp_5"
+                    android:layout_weight="0.1"/>
+
+            </LinearLayout>
+        </androidx.appcompat.widget.Toolbar>
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabLayoutRequest"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:tabSelectedTextColor="@android:color/white"
+            app:tabTextColor="@android:color/white"
+            app:tabIndicatorColor="@android:color/white"
+            android:background="@color/colorPrimary"
+            android:layout_below="@id/toolbar"/>
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/pagerRequest"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/tabLayoutRequest"/>
+    </RelativeLayout>
+</layout>

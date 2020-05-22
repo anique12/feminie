@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:padding="@dimen/dp_20"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/layout"
+        android:weightSum="1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imageViewReviews"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="@dimen/dp_50"
+            android:layout_weight="0.2"
+            android:src="@android:drawable/ic_menu_report_image"/>
+
+        <LinearLayout
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/dp_5"
+            android:orientation="vertical"
+            android:layout_weight="0.5">
+
+            <TextView
+                android:id="@+id/nameReviews"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/lato_regular"
+                android:text="Emol Williams"/>
+
+            <TextView
+                android:id="@+id/ratingReviews"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4.0"
+                android:fontFamily="@font/lato_light"
+                android:textColor="@android:color/holo_green_light"
+                android:drawableTint="@android:color/holo_green_dark"
+                android:drawablePadding="@dimen/dp_5"
+                android:drawableRight="@drawable/star"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/dateReviews"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:text="21st jan'18"
+            android:layout_weight="0.3"
+            android:gravity="end"
+            android:fontFamily="@font/lato_light"
+            android:textSize="@dimen/sp_12"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/review"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layout"
+        android:layout_marginTop="@dimen/dp_10"
+        android:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"/>
+
+
+
+
+
+</RelativeLayout>

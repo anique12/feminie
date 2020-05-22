@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/categories">
+
+    <fragment
+        android:id="@+id/categories"
+        android:name="com.example.handyman.fragments.Categories"
+        android:label="fragment_categories"
+        tools:layout="@layout/fragment_categories" >
+        <action
+            android:id="@+id/action_categories_to_subCategories"
+            app:destination="@id/subCategories" />
+    </fragment>
+    <fragment
+        android:id="@+id/account"
+        android:name="com.example.handyman.fragments.Account"
+        android:label="fragment_account"
+        tools:layout="@layout/fragment_account" >
+        <action
+            android:id="@+id/action_account_to_manageAddress"
+            app:destination="@id/manageAddress" />
+    </fragment>
+    <fragment
+        android:id="@+id/chat"
+        android:name="com.example.handyman.fragments.Chat"
+        android:label="fragment_chat" />
+    <fragment
+        android:id="@+id/requests"
+        android:name="com.example.handyman.fragments.Requests"
+        android:label="fragment_requests"
+        tools:layout="@layout/fragment_requests" />
+    <fragment
+        android:id="@+id/notifications"
+        android:name="com.example.handyman.fragments.Notifications"
+        android:label="fragment_notifications"
+        tools:layout="@layout/fragment_notifications" />
+    <fragment
+        android:id="@+id/manageAddress"
+        android:name="com.example.handyman.fragments.ManageAddress"
+        android:label="ManageAddress" />
+    <fragment
+        android:id="@+id/subCategories"
+        android:name="com.example.handyman.fragments.SubCategories"
+        android:label="SubCategories" >
+        <action
+            android:id="@+id/action_subCategories_to_jobSeekerFragment"
+            app:destination="@id/jobSeekerFragment" />
+        <argument
+            android:name="service"
+            app:argType="com.example.handyman.Models.service.Service" />
+    </fragment>
+    <fragment
+        android:id="@+id/jobSeekerFragment"
+        android:name="com.example.handyman.fragments.JobSeekerFragment"
+        android:label="JobSeekerFragment" >
+        <argument
+            android:name="service"
+            app:argType="com.example.handyman.Models.service.Service" />
+        <action
+            android:id="@+id/action_jobSeekerFragment_to_jobSeekerProfile"
+            app:destination="@id/jobSeekerProfile" />
+    </fragment>
+    <fragment
+        android:id="@+id/jobSeekerProfile"
+        android:name="com.example.handyman.fragments.JobSeekerProfile"
+        android:label="JobSeekerProfile" >
+        <action
+            android:id="@+id/action_jobSeekerProfile_to_book"
+            app:destination="@id/book" />
+        <argument
+            android:name="seeker"
+            app:argType="com.example.handyman.Models.jobSeeker.Seekers" />
+    </fragment>
+    <fragment
+        android:id="@+id/book"
+        android:name="com.example.handyman.Book"
+        android:label="Book" />
+</navigation>

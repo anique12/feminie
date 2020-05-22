@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/requests"
+        android:icon="@drawable/request"
+        android:title="REQUESTS"/>
+
+    <item
+        android:id="@+id/notifications"
+        android:icon="@drawable/notification"
+        android:title="NOTIFICATION"/>
+
+    <item
+        android:id="@+id/categories"
+        android:icon="@drawable/categories"
+        android:title="CATEGORIES"/>
+
+    <item
+        android:id="@+id/account"
+        android:icon="@drawable/person"
+        android:title="ACCOUNT"/>
+
+    <item
+        android:id="@+id/chat"
+        android:icon="@drawable/chat"
+        android:title="CHAT"/>
+
+
+</menu>

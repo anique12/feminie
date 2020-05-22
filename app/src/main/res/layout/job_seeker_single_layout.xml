@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="horizontal" android:layout_width="match_parent"
+        android:weightSum="2"
+        android:background="@android:color/white"
+        android:layout_marginBottom="@dimen/dp_2"
+        android:layout_height="wrap_content">
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imageViewJobSeeker"
+            android:layout_width="0dp"
+            android:src="@drawable/person"
+            android:padding="@dimen/dp_10"
+            android:layout_height="@dimen/dp_100"
+            android:layout_weight="0.5"/>
+
+
+        <LinearLayout
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:weightSum="2"
+            android:orientation="vertical"
+            android:layout_gravity="center_vertical"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp_0"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/nameJobSeeker"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/sp_16"
+                    android:layout_weight="1"
+                    android:text="Aliza Smith"
+                    />
+
+                <View
+                    android:layout_width="0.1dp"
+                    android:layout_marginRight="@dimen/dp_10"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:layout_marginTop="@dimen/dp_2"
+                    android:layout_marginBottom="@dimen/dp_2"
+                    android:layout_height="match_parent"
+                    android:background="@color/textColor"
+                    android:fontFamily="@font/lato_light"/>
+
+                <TextView
+                    android:id="@+id/jobTypeJobSeeker"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="@dimen/sp_12"
+                    android:fontFamily="@font/lato_light"
+                    android:text="Plumber"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/rateJobSeeker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:textSize="@dimen/sp_12"
+                android:fontFamily="@font/lato_light"
+                android:layout_marginTop="@dimen/dp_8"
+                android:text="$200 / per hour"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dp_10"
+            android:gravity="end"
+            android:orientation="vertical"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="0.5">
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/ratingJobSeeker"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:layout_marginRight="@dimen/dp_2"
+                    android:text="4.1"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:tint="@android:color/holo_green_light"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="@dimen/dp_5"
+                    android:src="@drawable/star"/>
+
+                <TextView
+                    android:id="@+id/workDoneJobSeeker"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:fontFamily="@font/lato_light"
+                    android:text="(121)"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/distanceJobSeeker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:fontFamily="@font/lato_light"
+                android:layout_marginTop="@dimen/dp_5"
+                android:text="2.0 km away"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>
